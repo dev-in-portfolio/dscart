@@ -4,86 +4,205 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UrbanHippieArt Feature Showcase | DARK STAR ART</title>
-  <meta name="description" content="UrbanHippieArt represented artist feature showcase: visual artwork collections, artistic identity, and official link.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+  <meta name="description" content="UrbanHippieArt represented artist feature showcase: multi-medium visual collections, welded metal sculpture, spray paint studies, and official link.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2307070a' stroke='%23dfb260' stroke-width='6'/><circle cx='50' cy='50' r='18' fill='%23dfb260'/></svg>">
   <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
 
+  <!-- HEADER NAVIGATION -->
   <header class="art-header">
-    <a href="/" class="brand-mark">
-      <span style="color:var(--accent-gold); font-size:1.4rem;">★</span>
+    <a href="/" class="brand-mark" aria-label="Dark Star Art Home">
+      <svg class="brand-svg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#dfb260" stroke-width="6"/>
+        <circle cx="50" cy="50" r="20" fill="#dfb260"/>
+      </svg>
       <span class="brand-title">DARK STAR ART</span>
     </a>
-    <nav class="art-nav">
+
+    <nav class="art-nav" aria-label="Main Navigation">
       <a href="/" class="nav-link">Home</a>
       <a href="/artists.html" class="nav-link">Artists We Represent</a>
       <a href="/urbanhippieart.html" class="nav-link active">UrbanHippieArt</a>
       <a href="/contact.html" class="nav-link">Representation / Contact</a>
     </nav>
-    <a href="https://urbanhippieart.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-button">Visit UrbanHippieArt ↗</a>
+
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <a href="https://urbanhippieart.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-button">Visit UrbanHippieArt ↗</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+    </div>
   </header>
 
   <main style="padding-top: 8rem;">
+    <!-- ARTIST INTRO HEADER -->
     <section class="section-wrapper">
       <div class="section-header">
-        <span class="hero-tag">REPRESENTED ARTIST PROFILE</span>
+        <span class="hero-tag">REPRESENTED ARTIST FEATURE</span>
         <h1 class="section-title">UrbanHippieArt</h1>
-        <p style="color:var(--text-muted); max-width:700px; margin:1rem auto 0; font-size:1.05rem;">
-          Exploring the vibrant intersection of contemporary expressionism, organic color theory, and bold narrative artwork.
+        <p style="color:var(--text-muted); max-width:700px; margin:1rem auto 0; font-size:1.08rem; line-height:1.8;">
+          Multi-disciplinary expressionist exploring physical texture, raw metallic form, spray paint on heavy paper, and experimental liquid pigments.
         </p>
       </div>
 
       <div style="text-align:center; margin-bottom:4rem;">
-        <a href="https://urbanhippieart.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-button" style="padding:1rem 2.5rem; font-size:1rem;">
+        <a href="https://urbanhippieart.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-button" style="padding:1rem 2.5rem; font-size:0.95rem; background:var(--accent-gold); color:#000;">
           Enter Official UrbanHippieArt Site ↗
         </a>
       </div>
 
-      <!-- GALLERY SELECTION SHOWCASE -->
-      <div class="artwork-grid">
-        <div class="art-card">
-          <div class="art-canvas">🎨</div>
-          <div class="art-info">
-            <h3 class="art-title">Prismatic Solitude</h3>
-            <span class="art-medium">Contemporary Canvas / Mixed Media</span>
+      <!-- EDITORIAL MASONRY GALLERY OF VERIFIED WORKS -->
+      <div class="artwork-grid" aria-label="Verified UrbanHippieArt Collection Works">
+
+        <!-- WORK 1: EPOXY & PAINT -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Epoxy & Paint Study in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-epoxy-paint-2025%2F2061040a-ca6b-4af8-a889-95d6fdd44ee4-20241011_061251_x4_cutout.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-epoxy-paint-2025%2F2061040a-ca6b-4af8-a889-95d6fdd44ee4-20241011_061251_x4_cutout.png__detail.webp"
+                 alt="Epoxy & Paint Study (2025) by UrbanHippieArt" 
+                 loading="eager">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Epoxy & Paint Study (2025)</h2>
+            <span class="art-card-medium">Epoxy Formulation & Pigment on Canvas</span>
+            <span class="art-card-album">Collection: (GA(C) Epoxy & Paint 2025</span>
           </div>
         </div>
 
-        <div class="art-card">
-          <div class="art-canvas">🌌</div>
-          <div class="art-info">
-            <h3 class="art-title">Cosmic Horizon No. 4</h3>
-            <span class="art-medium">Abstract Expressionism</span>
+        <!-- WORK 2: METAL SCULPTURE -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Metal Sculpture in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-metal-sculptures-2022-2023%2Fea52670b-c36b-40ed-813c-f1908a1f34cc-20220906_200021_x4_cutout.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-metal-sculptures-2022-2023%2Fea52670b-c36b-40ed-813c-f1908a1f34cc-20220906_200021_x4_cutout.png__detail.webp"
+                 alt="Metal Sculpture Series (~2022-2023) by UrbanHippieArt" 
+                 loading="eager">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Metal Sculpture Series</h2>
+            <span class="art-card-medium">Welded Steel Construction</span>
+            <span class="art-card-album">Collection: (GA(C) Metal Sculptures ~2022 2023</span>
           </div>
         </div>
 
-        <div class="art-card">
-          <div class="art-canvas">🌿</div>
-          <div class="art-info">
-            <h3 class="art-title">Organic Flow & Resonance</h3>
-            <span class="art-medium">Textured Color Field</span>
+        <!-- WORK 3: PAINT ON CANVAS -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Paint on Canvas in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-paint-on-canvas-2021-2022%2Fef2d49a3-0d9b-4ddc-838e-0174c5b23c00-2022-03-09_10.51.11-1_x4_enhanced.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-paint-on-canvas-2021-2022%2Fef2d49a3-0d9b-4ddc-838e-0174c5b23c00-2022-03-09_10.51.11-1_x4_enhanced.png__detail.webp"
+                 alt="Paint on Canvas (~2021-2022) by UrbanHippieArt" 
+                 loading="lazy">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Paint on Canvas Study</h2>
+            <span class="art-card-medium">Acrylic & Oil Paint on Canvas</span>
+            <span class="art-card-album">Collection: (GA(C) Paint on Canvas ~2021 2022</span>
           </div>
         </div>
 
-        <div class="art-card">
-          <div class="art-canvas">🔥</div>
-          <div class="art-info">
-            <h3 class="art-title">Ember & Neon Synapses</h3>
-            <span class="art-medium">Digital & Acrylic Synthesis</span>
+        <!-- WORK 4: SPRAY PAINT ON PAPER -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Spray Paint Study in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-spray-paint-on-paper-2016-2022%2F2446e5e6-b0dd-49b8-8a4f-f63f6f3a6fa1-Screenshot_20260209_132533_Wix_x4_enhanced.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-spray-paint-on-paper-2016-2022%2F2446e5e6-b0dd-49b8-8a4f-f63f6f3a6fa1-Screenshot_20260209_132533_Wix_x4_enhanced.png__detail.webp"
+                 alt="Spray Paint Study (2016-2022) by UrbanHippieArt" 
+                 loading="lazy">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Spray Paint Study</h2>
+            <span class="art-card-medium">Spray Paint on Heavy Archival Paper</span>
+            <span class="art-card-album">Collection: (GA(C) Spray Paint on Paper 2016 2022</span>
           </div>
         </div>
+
+        <!-- WORK 5: BURNING TREES -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Burning Trees Series in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-burning-trees-2016-2018%2F9b07ec02-c0f3-4dc7-9cd5-6aedc7904dd4-0003_Screenshot_20260209_133205_Wix_x4_cutout.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-burning-trees-2016-2018%2F9b07ec02-c0f3-4dc7-9cd5-6aedc7904dd4-0003_Screenshot_20260209_133205_Wix_x4_cutout.png__detail.webp"
+                 alt="Burning Trees Series (~2016-2018) by UrbanHippieArt" 
+                 loading="lazy">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Burning Trees Series</h2>
+            <span class="art-card-medium">Mixed Media & Pyrography</span>
+            <span class="art-card-album">Collection: (GA(C) Burning Trees ~2016 2018</span>
+          </div>
+        </div>
+
+        <!-- WORK 6: TATTOO INK ON CANVAS -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Tattoo Ink Study in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-tattoo-ink-on-canvas-2021-2022%2F4ff04767-21e1-44cf-8d96-1ad533ad2556-tattoo-ink-on-canvas-004.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-tattoo-ink-on-canvas-2021-2022%2F4ff04767-21e1-44cf-8d96-1ad533ad2556-tattoo-ink-on-canvas-004.png__detail.webp"
+                 alt="Tattoo Ink Study (~2021-2022) by UrbanHippieArt" 
+                 loading="lazy">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Tattoo Ink Study</h2>
+            <span class="art-card-medium">Tattoo Ink on Raw Canvas</span>
+            <span class="art-card-album">Collection: (GA(C) Tattoo Ink on Canvas ~2021 2022</span>
+          </div>
+        </div>
+
+        <!-- WORK 7: BLACK POWDER ON CANVAS -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Black Powder Composition in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-black-powder-on-canvas-2018-2021%2F6aaf8dc0-ad8a-4719-820f-82820cf1cb94-0002_Screenshot_20260209_142100_Wix_x4_enhanced.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-black-powder-on-canvas-2018-2021%2F6aaf8dc0-ad8a-4719-820f-82820cf1cb94-0002_Screenshot_20260209_142100_Wix_x4_enhanced.png__detail.webp"
+                 alt="Black Powder on Canvas (~2018-2021) by UrbanHippieArt" 
+                 loading="lazy">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Black Powder Study</h2>
+            <span class="art-card-medium">Black Powder & Pigment on Canvas</span>
+            <span class="art-card-album">Collection: (GA(C) Black Powder on Canvas ~2018 2021</span>
+          </div>
+        </div>
+
+        <!-- WORK 8: TREASURE CHEST -->
+        <div class="art-card" tabindex="0" role="button" aria-label="View Treasure Chest Construction in lightbox">
+          <div class="art-img-wrapper">
+            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-treasure-chest-2016-2018%2Fbaadfb81-aa52-4b93-a90b-c352148c2ab4-Screenshot_20260209_134800_Wix_x4_cutout.png__feed.webp" 
+                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-treasure-chest-2016-2018%2Fbaadfb81-aa52-4b93-a90b-c352148c2ab4-Screenshot_20260209_134800_Wix_x4_cutout.png__detail.webp"
+                 alt="Treasure Chest Construction (~2016-2018) by UrbanHippieArt" 
+                 loading="lazy">
+          </div>
+          <div class="art-card-body">
+            <h2 class="art-card-title">Treasure Chest Construction</h2>
+            <span class="art-card-medium">Sculptural Construction & Mixed Media</span>
+            <span class="art-card-album">Collection: (GA(C) Treasure Chest ~2016 2018</span>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
 
+  <!-- LIGHTBOX MODAL DIALOG -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Artwork expansion view">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close artwork view">&times;</button>
+      <button class="lightbox-nav prev" aria-label="Previous artwork">&#10094;</button>
+      <img src="" alt="" class="lightbox-img">
+      <div class="lightbox-caption">
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-sub"></p>
+      </div>
+      <button class="lightbox-nav next" aria-label="Next artwork">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="art-footer">
     <div class="footer-content">
-      <a href="https://dscuniverse.netlify.app" class="universe-gateway">
-        <span style="font-size:1.5rem; color:var(--accent-gold);">🌌</span>
-        <div>
-          <h4 style="font-family:var(--font-heading); color:#fff;">DARK STAR UNIVERSE</h4>
-          <p style="font-size:0.85rem; color:var(--text-muted);">Return to the Central Ecosystem Hub</p>
+      <a href="https://dscuniverse.netlify.app" class="universe-gateway" aria-label="Return to Dark Star Universe Central Hub">
+        <svg style="width:24px; height:24px; fill:var(--accent-gold);" viewBox="0 0 100 100">
+          <polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/>
+        </svg>
+        <div style="text-align:left;">
+          <h4 style="font-family:var(--font-editorial); color:#fff; font-size:0.95rem;">DARK STAR UNIVERSE</h4>
+          <p style="font-size:0.8rem; color:var(--text-muted);">Central Ecosystem Hub</p>
         </div>
       </a>
       <p style="font-size:0.85rem; color:var(--text-dim);">
