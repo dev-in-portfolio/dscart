@@ -3,110 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artists We Represent | DARK STAR ART</title>
-  <meta name="description" content="Explore represented visual artists at Dark Star Art, featuring contemporary creator UrbanHippieArt.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2307070a' stroke='%23dfb260' stroke-width='6'/><circle cx='50' cy='50' r='18' fill='%23dfb260'/></svg>">
-  <link rel="stylesheet" href="/src/style.css">
+  <title>UrbanHippieArt | DARK STAR ART</title>
+  <meta name="description" content="UrbanHippieArt is the current represented artist featured by Dark Star Art.">
+  <meta http-equiv="refresh" content="0; url=/urbanhippieart.html">
+  <link rel="canonical" href="/urbanhippieart.html">
 </head>
 <body>
-
-  <!-- HEADER NAVIGATION -->
-  <header class="art-header">
-    <a href="/" class="brand-mark" aria-label="Dark Star Art Home">
-      <svg class="brand-svg" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="45" fill="none" stroke="#dfb260" stroke-width="6"/>
-        <circle cx="50" cy="50" r="20" fill="#dfb260"/>
-      </svg>
-      <span class="brand-title">DARK STAR ART</span>
-    </a>
-
-    <nav class="art-nav" aria-label="Main Navigation">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/artists.html" class="nav-link active">Artists We Represent</a>
-      <a href="/urbanhippieart.html" class="nav-link">UrbanHippieArt</a>
-      <a href="/contact.html" class="nav-link">Representation / Contact</a>
-    </nav>
-
-    <div style="display:flex; align-items:center; gap:1rem;">
-      <a href="https://urbanhippieart.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-button">Visit UrbanHippieArt ↗</a>
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <main style="padding-top: 8rem;">
-    <section class="section-wrapper">
-      <div class="section-header">
-        <span class="hero-tag">GALLERY ROSTER</span>
-        <h1 class="section-title">Artists We Represent</h1>
-        <p style="color:var(--text-muted); max-width:640px; margin:1rem auto 0; font-size:1.05rem; line-height:1.7;">
-          Dark Star Art maintains a highly selective roster of contemporary visual artists, providing gallery curation, representation framing, and exhibition infrastructure.
-        </p>
-      </div>
-
-      <!-- FEATURED ROSTER DISPLAY -->
-      <div style="max-width:1100px; margin:0 auto; background:var(--bg-card); border:1px solid var(--border-gold); border-radius:8px; overflow:hidden; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center; padding:3rem 2.5rem;">
-        <div>
-          <span class="hero-tag" style="font-size:0.75rem;">FLAGSHIP REPRESENTATION</span>
-          <h2 style="font-family:var(--font-editorial); font-size:2.4rem; color:#fff; margin:0.5rem 0 1rem;">UrbanHippieArt</h2>
-          <p style="color:var(--text-muted); line-height:1.8; font-weight:300; margin-bottom:2rem;">
-            Working across multi-medium canvas, welded metal sculpture, spray paint on heavy paper, and experimental epoxy formulations. UrbanHippieArt explores the space between organic texture and vivid physical form.
-          </p>
-          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-            <a href="/urbanhippieart.html" class="cta-button" style="background:var(--accent-gold); color:#000;">View Artist Feature ↗</a>
-            <a href="https://urbanhippieart.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-button">Official Website ↗</a>
-          </div>
-        </div>
-
-        <div class="art-card" tabindex="0" role="button" aria-label="View Metal Sculpture in lightbox">
-          <div class="art-img-wrapper" style="height:380px;">
-            <img src="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-metal-sculptures-2022-2023%2Fea52670b-c36b-40ed-813c-f1908a1f34cc-20220906_200021_x4_cutout.png__feed.webp" 
-                 data-highres="https://urbanhippieart.netlify.app/.netlify/functions/gallery-image?key=ga-c-metal-sculptures-2022-2023%2Fea52670b-c36b-40ed-813c-f1908a1f34cc-20220906_200021_x4_cutout.png__detail.webp"
-                 alt="Welded Metal Sculpture by UrbanHippieArt" 
-                 loading="eager">
-          </div>
-          <div class="art-card-body">
-            <h3 class="art-card-title">Welded Metal Sculpture (~2022–2023)</h3>
-            <span class="art-card-medium">UrbanHippieArt Selected Work</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- LIGHTBOX MODAL DIALOG -->
-  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Artwork expansion view">
-    <div class="lightbox-content">
-      <button class="lightbox-close" aria-label="Close artwork view">&times;</button>
-      <button class="lightbox-nav prev" aria-label="Previous artwork">&#10094;</button>
-      <img src="" alt="" class="lightbox-img">
-      <div class="lightbox-caption">
-        <h3 class="lightbox-title"></h3>
-        <p class="lightbox-sub"></p>
-      </div>
-      <button class="lightbox-nav next" aria-label="Next artwork">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="art-footer">
-    <div class="footer-content">
-      <a href="https://dscuniverse.netlify.app" class="universe-gateway" aria-label="Return to Dark Star Universe Central Hub">
-        <svg style="width:24px; height:24px; fill:var(--accent-gold);" viewBox="0 0 100 100">
-          <polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/>
-        </svg>
-        <div style="text-align:left;">
-          <h4 style="font-family:var(--font-editorial); color:#fff; font-size:0.95rem;">DARK STAR UNIVERSE</h4>
-          <p style="font-size:0.8rem; color:var(--text-muted);">Central Ecosystem Hub</p>
-        </div>
-      </a>
-      <p style="font-size:0.85rem; color:var(--text-dim);">
-        © 2026 DARK STAR ART. Member of Dark Star Ecosystem. Representing UrbanHippieArt.
-      </p>
-    </div>
-  </footer>
-
-  <script type="module" src="/src/main.js"></script>
+  <p>This page has moved to <a href="/urbanhippieart.html">UrbanHippieArt</a>.</p>
+  <script>window.location.replace('/urbanhippieart.html');</script>
 </body>
 </html>

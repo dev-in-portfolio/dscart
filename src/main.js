@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initLightboxModal();
+  initImageFailureHandling();
   initFormSuccessCheck();
 });
 
@@ -135,6 +136,28 @@ function initLightboxModal() {
     if (e.target === lightbox) {
       closeLightbox();
     }
+  });
+
+  lightboxImg.addEventListener('error', () => {
+    lightboxImg.hidden = true;
+    lightbox.classList.add('has-image-error');
+    lightboxSub.textContent = 'This artwork is temporarily unavailable.';
+  });
+
+  lightboxImg.addEventListener('load', () => {
+    lightboxImg.hidden = false;
+    lightbox.classList.remove('has-image-error');
+  });
+}
+
+function initImageFailureHandling() {
+  document.querySelectorAll('.art-card img, .hero-art-display img').forEach((img) => {
+    img.addEventListener('error', () => {
+      const wrapper = img.closest('.art-img-wrapper, .hero-art-display');
+      if (!wrapper) return;
+      img.hidden = true;
+      wrapper.classList.add('is-image-unavailable');
+    });
   });
 }
 

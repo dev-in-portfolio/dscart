@@ -49,8 +49,9 @@ body {
   width: 100%;
   z-index: 100;
   padding: 1.25rem 2.5rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(1rem, 3vw, 3rem);
   align-items: center;
   background: rgba(7, 7, 10, 0.92);
   backdrop-filter: blur(16px);
@@ -82,7 +83,8 @@ body {
 .art-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
 }
 
 .nav-link {
@@ -131,6 +133,7 @@ body {
   color: var(--text-main);
   cursor: pointer;
   padding: 0.5rem;
+  margin-left: auto;
 }
 
 .mobile-menu-toggle svg {
@@ -142,13 +145,14 @@ body {
 @media (max-width: 900px) {
   .art-header {
     padding: 1rem 1.5rem;
+    grid-template-columns: auto 1fr auto;
   }
   .mobile-menu-toggle {
     display: block;
   }
   .art-nav {
-    position: fixed;
-    top: 70px;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
     background: rgba(10, 10, 15, 0.98);
@@ -157,12 +161,32 @@ body {
     padding: 2.5rem 1.5rem;
     gap: 1.75rem;
     border-bottom: 1px solid var(--border-subtle);
-    transform: translateY(-150%);
+    transform: translateY(-120%);
     transition: var(--transition-smooth);
   }
   .art-nav.is-active {
     transform: translateY(0);
   }
+}
+
+.is-image-unavailable {
+  min-height: 12rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--bg-surface), rgba(223, 178, 96, 0.08));
+}
+
+.is-image-unavailable::after {
+  content: 'Artwork temporarily unavailable';
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.lightbox-modal.has-image-error .lightbox-content::after {
+  content: 'Artwork temporarily unavailable';
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 /* HERO SECTION WITH REAL ARTWORK */
